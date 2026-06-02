@@ -2,106 +2,438 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Dashboard SGM – Chilquinta</title>
-<meta http-equiv="refresh" content="3600">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard SGM — 11:18 Tuesday 02 de June de 2026</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f0f2f5;color:#1a1a2e}
-.header{background:linear-gradient(135deg,#005e3a,#00875a);color:#fff;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 10px rgba(0,0,0,.25)}
-.header h1{font-size:1.4rem;font-weight:800}
-.sub{font-size:.82rem;opacity:.8;margin-top:3px}
-.meta{font-size:.78rem;opacity:.88;text-align:right;line-height:1.9}
-.badge{background:rgba(255,255,255,.18);padding:3px 10px;border-radius:20px;font-size:.72rem;display:inline-block;margin-top:2px}
-.container{max-width:1200px;margin:0 auto;padding:22px 16px}
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:20px}
-.kpi{background:#fff;border-radius:10px;padding:16px;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.07);border-top:4px solid #00875a}
-.kpi.amber{border-top-color:#f59e0b}.kpi.red{border-top-color:#ef4444}.kpi.blue{border-top-color:#3b82f6}.kpi.orange{border-top-color:#f97316}
-.kv{font-size:2rem;font-weight:800;line-height:1.1}
-.kl{font-size:.7rem;color:#6b7280;margin-top:5px;text-transform:uppercase;letter-spacing:.5px}
-.section{background:#fff;border-radius:10px;padding:20px;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.07)}
-.section h2{font-size:.95rem;font-weight:700;color:#005e3a;margin-bottom:14px;border-bottom:2px solid #f3f4f6;padding-bottom:8px}
-.op-badge{display:inline-flex;align-items:center;gap:8px;background:#dcfce7;color:#166534;padding:8px 18px;border-radius:8px;font-weight:700;margin-bottom:10px}
-.op-info{font-size:.85rem;color:#4b5563;line-height:1.8}
-.sismo-box{background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:14px;margin-top:12px}
-.sismo-box h3{color:#dc2626;font-size:.9rem;margin-bottom:8px}
-.sismo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;font-size:.82rem}
-.sismo-item span{display:block;font-weight:700;font-size:1.1rem;color:#dc2626}
-.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
-.tc{border-radius:8px;padding:12px 14px;font-size:.83rem;line-height:1.5}
-.tc.activo{background:#fffbeb;border-left:4px solid #f59e0b}
-.tc.completado{background:#f0fdf4;border-left:4px solid #22c55e}
-.tc-fecha{font-size:.72rem;color:#6b7280;margin-bottom:3px}
-.tc-who{font-weight:600;color:#374151;font-size:.8rem;margin-bottom:4px}
-.feed{max-height:520px;overflow-y:auto;padding-right:4px}
-.feed::-webkit-scrollbar{width:4px}.feed::-webkit-scrollbar-thumb{background:#d1d5db;border-radius:2px}
-.feed-day{font-size:.72rem;font-weight:700;color:#6b7280;text-align:center;background:#f3f4f6;padding:4px 12px;border-radius:20px;margin:14px auto 8px;display:table}
-.feed-msg{display:flex;gap:9px;margin-bottom:9px;align-items:flex-start}
-.feed-msg.out{flex-direction:row-reverse}
-.feed-avatar{width:30px;height:30px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;flex-shrink:0;margin-top:2px}
-.feed-bubble{border-radius:10px 10px 10px 2px;padding:8px 12px;font-size:.8rem;line-height:1.5;max-width:78%;box-shadow:0 1px 2px rgba(0,0,0,.06);background:#f9fafb;border:1px solid #f3f4f6}
-.bubble-out{background:#dcfce7;border-radius:10px 10px 2px 10px;border:none}
-.feed-who{font-size:.68rem;font-weight:700;color:#005e3a;margin-bottom:3px}
-.feed-meta{font-size:.65rem;color:#9ca3af;text-align:right;margin-top:4px}
-.tag{display:inline-block;padding:1px 7px;border-radius:10px;font-size:.65rem;font-weight:600;margin-left:5px}
-.inc-card{background:#fff7ed;border-left:4px solid #f97316;border-radius:8px;padding:12px 14px;font-size:.83rem;line-height:1.5}
-footer{text-align:center;padding:18px;color:#9ca3af;font-size:.78rem}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Roboto,Arial,sans-serif;background:#eef2ee;color:#1a2e1a;min-height:100vh}
+header{background:linear-gradient(135deg,#005e3a 0%,#00875a 100%);color:#fff;padding:20px 28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;box-shadow:0 3px 14px rgba(0,94,58,.35)}
+header h1{font-size:1.65rem;font-weight:800;letter-spacing:.4px}
+header .sub{font-size:.82rem;opacity:.82;margin-top:3px}
+header .meta{font-size:.82rem;opacity:.88;text-align:right;line-height:1.7}
+.container{max-width:1320px;margin:0 auto;padding:20px 16px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:22px}
+.kpi{background:#fff;border-radius:12px;padding:16px 18px;box-shadow:0 1px 5px rgba(0,0,0,.07);text-align:center;border-top:4px solid #00875a}
+.kpi.amber{border-top-color:#f59e0b}.kpi.blue{border-top-color:#3b82f6}.kpi.purple{border-top-color:#8b5cf6}.kpi.red{border-top-color:#ef4444}
+.kv{font-size:1.9rem;font-weight:800;color:#00875a;line-height:1.1}
+.kpi.amber .kv{color:#d97706}.kpi.blue .kv{color:#2563eb}.kpi.purple .kv{color:#7c3aed}.kpi.red .kv{color:#dc2626}
+.klbl{font-size:.7rem;color:#666;margin-top:5px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+.status-bar{background:#fff;border-radius:12px;padding:16px 22px;margin-bottom:22px;box-shadow:0 1px 5px rgba(0,0,0,.07);display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap}
+.sbadge{background:#00875a;color:#fff;border-radius:8px;padding:8px 18px;font-weight:800;font-size:1.05rem;white-space:nowrap;align-self:center}
+.sinfo{flex:1;min-width:220px}
+.sinfo strong{display:block;color:#005e3a;font-size:.92rem;margin-bottom:4px}
+.sinfo .zonas{font-size:.8rem;color:#444;line-height:1.8}
+.sinfo .weather{font-size:.76rem;color:#666;margin-top:4px}
+.seismic{background:linear-gradient(135deg,#7c3aed,#5b21b6);color:#fff;border-radius:10px;padding:10px 14px;font-size:.78rem;align-self:flex-start;line-height:1.6;min-width:200px}
+.seismic strong{font-size:.9rem;display:block;margin-bottom:3px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:22px}
+@media(max-width:750px){.grid2{grid-template-columns:1fr}}
+.sec-title{font-size:1rem;font-weight:700;color:#005e3a;margin-bottom:12px;padding-bottom:6px;border-bottom:2px solid #00875a33;display:flex;align-items:center;gap:7px}
+.tcard{background:#fff;border-radius:10px;padding:13px 16px;margin-bottom:10px;box-shadow:0 1px 4px rgba(0,0,0,.07);border-left:4px solid #f59e0b}
+.tcard.done{border-left-color:#00875a}
+.tcard-hdr{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:5px}
+.tcard-title{font-weight:700;font-size:.86rem;color:#1a1a1a;flex:1}
+.tbadge{font-size:.68rem;padding:2px 8px;border-radius:20px;font-weight:700;white-space:nowrap}
+.tbadge.active{background:#fef3c7;color:#d97706}.tbadge.done{background:#d1fae5;color:#065f46}
+.tcard-meta{font-size:.72rem;color:#888;margin-bottom:4px}
+.tcard-text{font-size:.8rem;color:#444;line-height:1.4}
+.feed{background:#fff;border-radius:12px;padding:14px 16px;box-shadow:0 1px 5px rgba(0,0,0,.07);max-height:640px;overflow-y:auto}
+.feed-day{margin-bottom:16px}
+.feed-day-hdr{background:#f0f6f0;border-radius:8px;padding:5px 12px;font-size:.75rem;font-weight:700;color:#005e3a;display:inline-block;margin-bottom:8px}
+.feed-msg{display:flex;gap:9px;margin-bottom:9px;padding:8px 10px;background:#fafafa;border-radius:8px;border-left:3px solid #00875a}
+.feed-av{width:30px;height:30px;border-radius:50%;background:#00875a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.72rem;flex-shrink:0;margin-top:2px}
+.feed-body{flex:1}
+.feed-name{font-weight:700;font-size:.76rem;color:#005e3a}
+.feed-time{font-size:.68rem;color:#aaa;margin-left:5px}
+.tag{font-size:.62rem;padding:1px 6px;border-radius:10px;font-weight:700;margin-left:5px}
+.feed-txt{font-size:.78rem;color:#333;line-height:1.45;margin-top:2px}
+/* Gallery */
+.gallery-section{background:#fff;border-radius:12px;padding:16px;margin-bottom:22px;box-shadow:0 1px 5px rgba(0,0,0,.07)}
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-top:12px}
+.photo-card{border-radius:8px;overflow:hidden;background:#f0f4f0;aspect-ratio:4/3;cursor:pointer;position:relative;transition:transform .15s,box-shadow .15s}
+.photo-card:hover{transform:scale(1.03);box-shadow:0 4px 16px rgba(0,0,0,.18)}
+.photo-card img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.6));color:#fff;padding:6px 8px;font-size:.68rem}
+.photo-sender{font-weight:700;font-size:.72rem}
+/* Lightbox */
+#lightbox{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;display:none;flex-direction:column;align-items:center;justify-content:center;padding:20px}
+#lightbox.active{display:flex}
+#lb-img{max-width:90vw;max-height:75vh;object-fit:contain;border-radius:8px;box-shadow:0 0 40px rgba(0,0,0,.5)}
+.lb-info{color:#fff;text-align:center;margin-top:12px;max-width:600px}
+.lb-desc{font-size:.88rem;margin-bottom:4px}
+.lb-sender{font-size:.78rem;opacity:.7}
+.lb-counter{font-size:.72rem;opacity:.5;margin-top:3px}
+.lb-close{position:absolute;top:14px;right:18px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;opacity:.8;line-height:1}
+.lb-close:hover{opacity:1}
+.lb-navs{display:flex;gap:14px;margin-top:14px}
+.lb-nav{background:rgba(255,255,255,.15);color:#fff;border:none;border-radius:50%;width:44px;height:44px;font-size:1.3rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb-nav:hover{background:rgba(255,255,255,.3)}
+footer{text-align:center;padding:14px;font-size:.74rem;color:#888;border-top:1px solid #dde8dd;margin-top:4px}
 footer a{color:#00875a;text-decoration:none}
-@media(max-width:600px){.header{flex-direction:column;gap:8px;text-align:center}.sismo-grid{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
-<div class="header">
-  <div><h1>⚡ Dashboard Operacional SGM</h1><div class="sub">Coordinación Operacional Eléctrica – Chilquinta</div></div>
-  <div class="meta">📅 martes, 2 de junio de 2026<br>🕐 Actualización: 06:23 a. m.<div class="badge">🔄 Cada hora</div></div>
-</div>
-<div class="container">
-<div class="kpi-grid">
-  <div class="kpi"><div class="kv" style="color:#22c55e">NORMAL</div><div class="kl">Estado General</div></div>
-  <div class="kpi amber"><div class="kv" style="color:#f59e0b">10</div><div class="kl">Trabajos Activos</div></div>
-  <div class="kpi"><div class="kv" style="color:#22c55e">1</div><div class="kl">Completados</div></div>
-  <div class="kpi blue"><div class="kv" style="color:#3b82f6">29</div><div class="kl">Mensajes</div></div>
-  <div class="kpi red"><div class="kv" style="color:#ef4444">2</div><div class="kl">Sísmicos</div></div>
-  <div class="kpi orange"><div class="kv" style="color:#f97316">1</div><div class="kl">Incidentes</div></div>
-</div>
-<div class="section">
-  <h2>📍 Estado Operacional CHQTA</h2>
-  <div class="op-badge">🟢 Estado General: NORMAL</div>
-  <div class="op-info">
-    <strong>Resumen CHQTA</strong> — Período: 30 mayo al 01 junio 2026 (T+1 a T+3)<br>
-    <strong>Zonas:</strong> San Antonio 🟢 | Valparaíso 🟢 | Marga Marga 🟢 | Costa 🟢 | Quillota 🟢 | Aconcagua 🟢<br>
-    ⛅ Sin precipitaciones relevantes &nbsp;|&nbsp; 💨 Viento &lt;39 km/h en todas las zonas<br>
-    🌡️ Costa: 7–17°C &nbsp;|&nbsp; Interior (Aconcagua): máx. ~28°C<br>
-    ⚠️ Sin riesgos meteorológicos significativos para la operación
+<header>
+  <div>
+    <h1>⚡ Dashboard SGM Distribución</h1>
+    <div class="sub">Grupo WhatsApp — Coordinación Operacional Chilquinta</div>
   </div>
-  <div class="sismo-box">
-    <h3>🔴 Evento Sísmico — 31/05/2026 17:34 hrs</h3>
-    <div class="sismo-grid">
-      <div class="sismo-item">Magnitud<span>5.8 Mwp</span></div>
-      <div class="sismo-item">Profundidad<span>30 km</span></div>
-      <div class="sismo-item">Localización<span>28 km O Quintero</span></div>
-      <div class="sismo-item">Coordenadas<span>Lat -32.77 / Lon -71.82</span></div>
-      <div class="sismo-item">Retardo detección<span>3.92 min</span></div>
-      <div class="sismo-item">Estado<span style="color:#22c55e">✅ Monitoreado</span></div>
+  <div class="meta">
+    <div>📅 Tuesday 02 de June de 2026</div>
+    <div>⏱ Actualizado: <strong>11:18</strong></div>
+    <div style="opacity:.65;font-size:.75rem">Cada hora automáticamente</div>
+  </div>
+</header>
+
+<div class="container">
+
+<!-- KPIs -->
+<div class="kpis">
+  <div class="kpi"><div class="kv">NORMAL</div><div class="klbl">Estado General</div></div>
+  <div class="kpi amber"><div class="kv">3</div><div class="klbl">Trabajos Activos</div></div>
+  <div class="kpi"><div class="kv">3</div><div class="klbl">Completados Hoy</div></div>
+  <div class="kpi blue"><div class="kv">28</div><div class="klbl">Mensajes</div></div>
+  <div class="kpi purple"><div class="kv">1</div><div class="klbl">Evento Sísmico</div></div>
+  <div class="kpi blue"><div class="kv">11</div><div class="klbl">Fotos Capturadas</div></div>
+</div>
+
+<!-- Estado Operacional -->
+<div class="status-bar">
+  <div class="sbadge">✅ ESTADO: NORMAL</div>
+  <div class="sinfo">
+    <strong>CHQTA — Resumen Operacional | 30 mayo – 01 junio 2026 (T+1 a T+3)</strong>
+    <div class="zonas">🟢 San Antonio &nbsp; 🟢 Valparaíso &nbsp; 🟢 Marga Marga &nbsp; 🟢 Costa &nbsp; 🟢 Quillota &nbsp; 🟢 Aconcagua</div>
+    <div class="weather">⛅ Sin precipitaciones relevantes · Vientos &lt;39 km/h · Temp. Costa 7–17°C · Interior máx. ~28°C · Sin riesgos meteorológicos</div>
+  </div>
+  <div class="seismic">
+    <strong>🌊 Sismo M5.8 — CSN</strong>
+    31/05/2026 17:34:18 LOC<br>
+    📍 28 km al O de Quintero<br>
+    Prof. 30 km · Lat -32.77 / Lon -71.82<br>
+    <span style="font-size:.72rem;opacity:.85">Sin afectación reportada en red</span>
+  </div>
+</div>
+
+<!-- Trabajos y Feed -->
+<div class="grid2">
+  <div>
+    <div class="sec-title">🔧 Trabajos Operativos</div>
+    <div class="tcard active">
+      <div class="tcard-hdr">
+        <span class="tcard-title">Reemplazo cruceta — Alim. Quilpué</span>
+        <span class="tbadge active">🔄 EN EJECUCIÓN</span>
+      </div>
+      <div class="tcard-meta">📍 Aguas abajo Rec. Roosevelt Berna &nbsp;|&nbsp; 👤 Rodrigo Canihuante &nbsp;|&nbsp; 📅 31/05 – 01/06/2026</div>
+      <div class="tcard-text">Caso puntual. Apoyo SIMANTEC. Supervisado por Mtto y EH&S.</div>
+    </div><div class="tcard active">
+      <div class="tcard-hdr">
+        <span class="tcard-title">4 Postes MT afectados — Av. Atamirano</span>
+        <span class="tbadge active">🔄 COORDINADO</span>
+      </div>
+      <div class="tcard-meta">📍 Avenida Atamirano &nbsp;|&nbsp; 👤 Coordinado con Mtto y Contratista &nbsp;|&nbsp; 📅 30/05/2026</div>
+      <div class="tcard-text">Afectación por choque de vehículo. Coordinar normalización.</div>
+    </div><div class="tcard active">
+      <div class="tcard-hdr">
+        <span class="tcard-title">Inspección reclamos — Quillota</span>
+        <span class="tbadge active">🔄 EN EJECUCIÓN</span>
+      </div>
+      <div class="tcard-meta">📍 Zona Quillota &nbsp;|&nbsp; 👤 JC Jaque / Patricio Valdes &nbsp;|&nbsp; 📅 30/05 – 01/06/2026</div>
+      <div class="tcard-text">5 cuadrillas. Técnicos RREE apoyan desde lunes.</div>
+    </div><div class="tcard done">
+      <div class="tcard-hdr">
+        <span class="tcard-title">Cambio crucetas — Alim. Pangal</span>
+        <span class="tbadge done">✅ COMPLETADO</span>
+      </div>
+      <div class="tcard-meta">📍 Alimentador Pangal &nbsp;|&nbsp; 👤 Oscar Guerrero &nbsp;|&nbsp; 📅 28/05/2026</div>
+      <div class="tcard-text">Término por plan de mantenimiento.</div>
+    </div><div class="tcard done">
+      <div class="tcard-hdr">
+        <span class="tcard-title">Trabajos caso SEC — Quebrada Alvarado</span>
+        <span class="tbadge done">✅ COMPLETADO</span>
+      </div>
+      <div class="tcard-meta">📍 Quebrada Alvarado &nbsp;|&nbsp; 👤 Claudio González V. &nbsp;|&nbsp; 📅 29/05/2026</div>
+      <div class="tcard-text">Trabajos terminados. Falta normalizar esquema.</div>
+    </div><div class="tcard done">
+      <div class="tcard-hdr">
+        <span class="tcard-title">Postes reemplazados — Zona Valpo</span>
+        <span class="tbadge done">✅ COMPLETADO</span>
+      </div>
+      <div class="tcard-meta">📍 Zona Valparaíso &nbsp;|&nbsp; 👤 Nicolas Olivares Chilquinta &nbsp;|&nbsp; 📅 30/05/2026</div>
+      <div class="tcard-text">Postes reemplazados exitosamente.</div>
+    </div>
+  </div>
+  <div>
+    <div class="sec-title">💬 Feed de Mensajes SGM</div>
+    <div class="feed">
+      <div class="feed-day"><span class="feed-day-hdr">📅 Jueves 28 mayo 2026</span><div class="feed-msg" style="border-left:3px solid #0ea5e9">
+          <div class="feed-av" style="background:#0ea5e9">JT</div>
+          <div class="feed-body">
+            <span class="feed-name">Jorge Torres Chqta</span>
+            <span class="feed-time">11:13</span>
+            <span class="tag" style="background:#e0f2fe;color:#0ea5e9">⚡ OPERACIONAL</span>
+            <div class="feed-txt">Equipos de respaldo para electrodependientes y combustible entregado a los apoyos en terreno.</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #0ea5e9">
+          <div class="feed-av" style="background:#0ea5e9">JC</div>
+          <div class="feed-body">
+            <span class="feed-name">Juan Carlos Jaque Chqta</span>
+            <span class="feed-time">11:22</span>
+            <span class="tag" style="background:#e0f2fe;color:#0ea5e9">⚡ OPERACIONAL</span>
+            <div class="feed-txt">Quillota reportada con 2 móviles.</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #0ea5e9">
+          <div class="feed-av" style="background:#0ea5e9">LO</div>
+          <div class="feed-body">
+            <span class="feed-name">Luis Ortega Chilquinta</span>
+            <span class="feed-time">11:23</span>
+            <span class="tag" style="background:#e0f2fe;color:#0ea5e9">⚡ OPERACIONAL</span>
+            <div class="feed-txt">Zona costa con tres móviles.</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #64748b">
+          <div class="feed-av" style="background:#64748b">JC</div>
+          <div class="feed-body">
+            <span class="feed-name">Juan Carlos Jaque Chqta</span>
+            <span class="feed-time">11:34</span>
+            <span class="tag" style="background:#f1f5f9;color:#64748b">ℹ️ INFO</span>
+            <div class="feed-txt">Enviados correos a CD y RRAA (correos a centros de abastecimiento).</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #64748b">
+          <div class="feed-av" style="background:#64748b">JV</div>
+          <div class="feed-body">
+            <span class="feed-name">Julio Vega Chilquinta</span>
+            <span class="feed-time">11:56</span>
+            <span class="tag" style="background:#f1f5f9;color:#64748b">ℹ️ INFO</span>
+            <div class="feed-txt">Estimados, este mes se realizó la gestión con el área de planificación para solicitar más presupuesto. Siendo 28 de mayo aún tenemos ppto disponible, deben agilizar los pagos.</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #64748b">
+          <div class="feed-av" style="background:#64748b">MI</div>
+          <div class="feed-body">
+            <span class="feed-name">Matias Inostroza Chqta</span>
+            <span class="feed-time">11:59</span>
+            <span class="tag" style="background:#f1f5f9;color:#64748b">ℹ️ INFO</span>
+            <div class="feed-txt">[Foto] Eso incluye comprometido + plan Res Ord. En Aconcagua tenemos solo 6 millones disponibles. Quedamos casi al día con contratista y Tecnored.</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #64748b">
+          <div class="feed-av" style="background:#64748b">HC</div>
+          <div class="feed-body">
+            <span class="feed-name">Hernan Chqta</span>
+            <span class="feed-time">12:01</span>
+            <span class="tag" style="background:#f1f5f9;color:#64748b">ℹ️ INFO</span>
+            <div class="feed-txt">En espera de aprobación de un servicio por 40 millones. Nos quedará para los recos que faltarán el resto del año.</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #00875a">
+          <div class="feed-av" style="background:#00875a">JC</div>
+          <div class="feed-body">
+            <span class="feed-name">Juan Carlos Jaque Chqta</span>
+            <span class="feed-time">13:25</span>
+            <span class="tag" style="background:#d1fae5;color:#00875a">✅ COMPLETADO</span>
+            <div class="feed-txt">Se da por término cambio de crucetas en alimentador Pangal por plan de mtto. Técnico Oscar Guerrero.</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #64748b">
+          <div class="feed-av" style="background:#64748b">RC</div>
+          <div class="feed-body">
+            <span class="feed-name">Rodrigo Canihuante</span>
+            <span class="feed-time">16:49</span>
+            <span class="tag" style="background:#f1f5f9;color:#64748b">ℹ️ INFO</span>
+            <div class="feed-txt">En reunión COGRID comuna de Quilpué. [📷 foto]</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #64748b">
+          <div class="feed-av" style="background:#64748b">DV</div>
+          <div class="feed-body">
+            <span class="feed-name">Danny Valencia</span>
+            <span class="feed-time">16:54</span>
+            <span class="tag" style="background:#f1f5f9;color:#64748b">ℹ️ INFO</span>
+            <div class="feed-txt">Agregué dos carpetas más a los informes técnicos en Teams (grupo INFORME TECNICOS SGM): Proyectos (Controladores) y Técnico Legal (G. Legal).</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #10b981">
+          <div class="feed-av" style="background:#10b981">FR</div>
+          <div class="feed-body">
+            <span class="feed-name">Felipe Rivera</span>
+            <span class="feed-time">18:04</span>
+            <span class="tag" style="background:#d1fae5;color:#10b981">📄 DOC</span>
+            <div class="feed-txt">Reporte_Planes_SEC_2026_28-05-2026 (8).html — Buenas tardes, se adjunta actualización de compromisos SEC y Oficios.</div>
+          </div>
+        </div></div><div class="feed-day"><span class="feed-day-hdr">📅 Viernes 29 mayo 2026</span><div class="feed-msg" style="border-left:3px solid #f59e0b">
+          <div class="feed-av" style="background:#f59e0b">CG</div>
+          <div class="feed-body">
+            <span class="feed-name">Claudio González V.</span>
+            <span class="feed-time">10:52</span>
+            <span class="tag" style="background:#fef3c7;color:#f59e0b">🔄 ACTIVO</span>
+            <div class="feed-txt">Buenos días. En proceso trabajos relacionados al caso SEC por accidente de tercero. Sector Quebrada Alvarado. [📷 foto trabajos]</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #64748b">
+          <div class="feed-av" style="background:#64748b">PV</div>
+          <div class="feed-body">
+            <span class="feed-name">Patricio Valdes Chqta</span>
+            <span class="feed-time">12:26</span>
+            <span class="tag" style="background:#f1f5f9;color:#64748b">ℹ️ INFO</span>
+            <div class="feed-txt">Caballeros, a raíz del correo de ayer y la cantidad de reclamos acumulados en las zonas, se necesita apoyo para inspección y ver compromisos con fechas cumplidas en Quillota.</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #64748b">
+          <div class="feed-av" style="background:#64748b">DV</div>
+          <div class="feed-body">
+            <span class="feed-name">Danny Valencia</span>
+            <span class="feed-time">12:39</span>
+            <span class="tag" style="background:#f1f5f9;color:#64748b">ℹ️ INFO</span>
+            <div class="feed-txt">Por valpo mantenemos esquema de apoyos a la gestión del equipo.</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #64748b">
+          <div class="feed-av" style="background:#64748b">JC</div>
+          <div class="feed-body">
+            <span class="feed-name">Juan Carlos Jaque Chqta</span>
+            <span class="feed-time">12:48</span>
+            <span class="tag" style="background:#f1f5f9;color:#64748b">ℹ️ INFO</span>
+            <div class="feed-txt">Ya está coordinado para Quillota. A contar del lunes nos apoyará técnicos de RREE. Mañana la zona tiene dx con 5 cuadrilla.</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #64748b">
+          <div class="feed-av" style="background:#64748b">AA</div>
+          <div class="feed-body">
+            <span class="feed-name">Adolfo Ampuero</span>
+            <span class="feed-time">12:54</span>
+            <span class="tag" style="background:#f1f5f9;color:#64748b">ℹ️ INFO</span>
+            <div class="feed-txt">Buenas tardes, San Antonio sin disponibilidad.</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #64748b">
+          <div class="feed-av" style="background:#64748b">RC</div>
+          <div class="feed-body">
+            <span class="feed-name">Rodrigo Canihuante</span>
+            <span class="feed-time">12:58</span>
+            <span class="tag" style="background:#f1f5f9;color:#64748b">ℹ️ INFO</span>
+            <div class="feed-txt">Lamentablemente Sin Disponibilidad por MM.</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #00875a">
+          <div class="feed-av" style="background:#00875a">CG</div>
+          <div class="feed-body">
+            <span class="feed-name">Claudio González V.</span>
+            <span class="feed-time">14:09</span>
+            <span class="tag" style="background:#d1fae5;color:#00875a">✅ COMPLETADO</span>
+            <div class="feed-txt">Trabajos terminados. Solo falta normalizar esquema. [📷 foto postes]</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #64748b">
+          <div class="feed-av" style="background:#64748b">HC</div>
+          <div class="feed-body">
+            <span class="feed-name">Hernan Chqta</span>
+            <span class="feed-time">14:51</span>
+            <span class="tag" style="background:#f1f5f9;color:#64748b">ℹ️ INFO</span>
+            <div class="feed-txt">Estimados, capacitación de protecciones en el módulo de análisis de falla, queda para el día martes horario AM en edif. Barón. Importante su asistencia.</div>
+          </div>
+        </div></div><div class="feed-day"><span class="feed-day-hdr">📅 Sábado 30 mayo 2026</span><div class="feed-msg" style="border-left:3px solid #f59e0b">
+          <div class="feed-av" style="background:#f59e0b">MK</div>
+          <div class="feed-body">
+            <span class="feed-name">Martin Kempf K</span>
+            <span class="feed-time">07:16</span>
+            <span class="tag" style="background:#fef3c7;color:#f59e0b">🔄 ACTIVO</span>
+            <div class="feed-txt">Buen día. El MV corresponde a árboles imposibles de hacer de otra forma. [📷 'Una postal' - árbol afectando red]</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #f59e0b">
+          <div class="feed-av" style="background:#f59e0b">CT</div>
+          <div class="feed-body">
+            <span class="feed-name">Cuadrilla terreno</span>
+            <span class="feed-time">08:16</span>
+            <span class="tag" style="background:#fef3c7;color:#f59e0b">🔄 ACTIVO</span>
+            <div class="feed-txt">Buenos días, para su información tenemos 4 Postes MT afectados en avenida Atamirano por choque de vehículo. Ya coordinado con Mantenimiento y Contratista. [📷]</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #00875a">
+          <div class="feed-av" style="background:#00875a">JC</div>
+          <div class="feed-body">
+            <span class="feed-name">Juan Carlos Jaque Chqta</span>
+            <span class="feed-time">13:11</span>
+            <span class="tag" style="background:#d1fae5;color:#00875a">✅ COMPLETADO</span>
+            <div class="feed-txt">Damos por finalizado los trabajos y el oficio asociado a quebrada alvarado. @Felipe haremos llegar los informes para cargar en sistema.</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #00875a">
+          <div class="feed-av" style="background:#00875a">NO</div>
+          <div class="feed-body">
+            <span class="feed-name">Nicolas Olivares Chilquinta</span>
+            <span class="feed-time">13:19</span>
+            <span class="tag" style="background:#d1fae5;color:#00875a">✅ COMPLETADO</span>
+            <div class="feed-txt">Postes reemplazados — trabajos finalizados. [📷📷 fotos postes nuevos]</div>
+          </div>
+        </div></div><div class="feed-day"><span class="feed-day-hdr">📅 Domingo 31 mayo 2026</span><div class="feed-msg" style="border-left:3px solid #3b82f6">
+          <div class="feed-av" style="background:#3b82f6">JT</div>
+          <div class="feed-body">
+            <span class="feed-name">Jorge Torres Chqta</span>
+            <span class="feed-time">08:00</span>
+            <span class="tag" style="background:#dbeafe;color:#3b82f6">📊 INFORME</span>
+            <div class="feed-txt">CHQTA — Resumen Operacional | Período: 30 mayo al 01 junio 2026 (T+1 a T+3) | Estado General: NORMAL | Zonas: 🟢 San Antonio 🟢 Valparaíso 🟢 Marga Marga 🟢 Costa 🟢 Quillota 🟢 Aconcagua | Sin precipitaciones relevantes. Vientos <39 km/h. Temperaturas Costa 7-17°C, Interior máx 28°C. Sin riesgos meteorológicos.</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #f59e0b">
+          <div class="feed-av" style="background:#f59e0b">RC</div>
+          <div class="feed-body">
+            <span class="feed-name">Rodrigo Canihuante</span>
+            <span class="feed-time">10:27</span>
+            <span class="tag" style="background:#fef3c7;color:#f59e0b">🔄 ACTIVO</span>
+            <div class="feed-txt">En ejecución reemplazo de cruceta en alimentador Quilpué, aguas abajo de Rec roosevelt berna, caso puntual y particular. Apoyo de SIMANTEC, supervisado en terreno por Mtto y EH&S. [📷]</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #8b5cf6">
+          <div class="feed-av" style="background:#8b5cf6">JC</div>
+          <div class="feed-body">
+            <span class="feed-name">Juan Carlos Jaque Chqta</span>
+            <span class="feed-time">17:42</span>
+            <span class="tag" style="background:#ede9fe;color:#8b5cf6">🌊 SISMO</span>
+            <div class="feed-txt">[SISMO] Informe Preliminar CSN: MAG 5.8 Mwp | PROF 30 km | Coord: Lat -32.77 Lon -71.82 | Localidad: 28 km al O de Quintero | Hora LOC: 2026/05/31 17:34:18</div>
+          </div>
+        </div><div class="feed-msg" style="border-left:3px solid #8b5cf6">
+          <div class="feed-av" style="background:#8b5cf6">JT</div>
+          <div class="feed-body">
+            <span class="feed-name">Jorge Torres Chqta</span>
+            <span class="feed-time">17:42</span>
+            <span class="tag" style="background:#ede9fe;color:#8b5cf6">🌊 SISMO</span>
+            <div class="feed-txt">[SISMO CSN] ÚLTIMOS SISMOS: 2026-05-31 17:34:18 | 28 km al O de Quintero | Prof. 30 km | Mag. 5.8</div>
+          </div>
+        </div></div><div class="feed-day"><span class="feed-day-hdr">📅 Lunes 1 junio 2026</span><div class="feed-msg" style="border-left:3px solid #f59e0b">
+          <div class="feed-av" style="background:#f59e0b">RC</div>
+          <div class="feed-body">
+            <span class="feed-name">Rodrigo Canihuante</span>
+            <span class="feed-time">10:27</span>
+            <span class="tag" style="background:#fef3c7;color:#f59e0b">🔄 ACTIVO</span>
+            <div class="feed-txt">Continuación trabajos Quilpué. [📷 foto en terreno]</div>
+          </div>
+        </div></div>
     </div>
   </div>
 </div>
-<div class="section">
-  <h2>🔨 Trabajos en Ejecución y Completados (10 activos / 1 completados)</h2>
-  <div class="tg"><div class="trabajo-card activo"><div class="tc-fecha">🕐 26/5/2026 10:15</div><div class="tc-who">👷 Rodrigo Canihuante</div>Buen dia, continuamos en ejecución de Mantenimiento Preventivo MN-2026-1238 / SAP 10206019. Reemplazo Crucetas Madera, Alim. Villa Dulce. Técnico: Sabino Cruz</div><div class="trabajo-card activo"><div class="tc-fecha">🕐 26/5/2026 14:41</div><div class="tc-who">👷 Rodrigo Canihuante</div>En proceso de reemplazo de Crucetas por emergencia, Alim. Marga Marga — Rec La Retuca Los Eucaliptos. Técnico: Sabino Cruz</div><div class="trabajo-card activo"><div class="tc-fecha">🕐 27/5/2026 09:34</div><div class="tc-who">👷 Adolfo Ampuero</div>Buen dia, operación automática de Rec. Salida Rama Santo Domingo del Alim. San Juan por FST. SAT en inspección + Equipo Mtto.</div><div class="trabajo-card activo"><div class="tc-fecha">🕐 27/5/2026 10:09</div><div class="tc-who">👷 Adolfo Ampuero</div>Se verifica puente MT cortado. Se realizará instalación de jumper con SAT y Mtto, para luego reparar con URENER.</div><div class="trabajo-card activo"><div class="tc-fecha">🕐 27/5/2026 10:26</div><div class="tc-who">👷 Juan Carlos Jaque Chqta</div>Cambio crucetas alim. Pataguas — plan mtto. RREE: Franco Figueroa. Mtto: JC. Jaque. Retraso 1hr por equipo sin comunicación. 3 técnicos en exámenes ocupacionales.</div><div class="trabajo-card activo"><div class="tc-fecha">🕐 27/5/2026 14:53</div><div class="tc-who">👷 Rodrigo Arancibia</div>Trabajos alim. el Sol, MN-2026-1005 / SAP 10206114. Mtto Marga Marga + cuadrilla Urener. Técnico: Gerardo Salgado.</div><div class="trabajo-card activo"><div class="tc-fecha">🕐 28/5/2026 10:04</div><div class="tc-who">👷 Luis Ortega Chilquinta</div>Buenos días, instalación de silicona con robot de recubrimiento. [Foto terreno]</div><div class="trabajo-card activo"><div class="tc-fecha">🕐 28/5/2026 10:08</div><div class="tc-who">👷 Rodrigo Canihuante</div>En ejecución MN-2026-1275 / SAP 10206429 — Instalación Separadores MT, Alim. Paso Hondo. Técnico: Gerardo Salgado.</div><div class="trabajo-card activo"><div class="tc-fecha">🕐 30/5/2026 06:47</div><div class="tc-who">👷 Juan Carlos Jaque Chqta</div>DX programada: cambio masivo 34 crucetas y MV por oficio SEC. Recursos: 3 RRAA Eless, 2 RREE, 3 mtto, 1 Hidro, 1 empalme. Apoyo Rafael Allendes y Felipe Legua.</div><div class="trabajo-card activo"><div class="tc-fecha">🕐 01/6/2026 10:27</div><div class="tc-who">👷 Rodrigo Canihuante</div>En ejecución reemplazo de cruceta alim. Quilpué — Rec Roosevelt berna. Apoyo SIMANTEC, supervisado Mtto y EH&S. [foto trabajo con grúa]</div><div class="trabajo-card completado"><div class="tc-fecha">✅ 30/5/2026 13:11</div><div class="tc-who">👷 Juan Carlos Jaque Chqta</div>Damos por finalizado los trabajos y el oficio asociado a quebrada alvarado. @Felipe haremos llegar informes para cargar en sistema.</div></div>
+
+<!-- Galería de fotos -->
+<div class="gallery-section">
+  <div class="sec-title">📸 Galería Operativa — 11 fotos capturadas (clic para ver)</div>
+  <div class="photo-grid" id="photo-grid">
+    <!-- Photos loaded via JS -->
+    <div class="photo-card" style="background:#e0f2e0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px" onclick="alert('Fotos disponibles en la versión con datos capturados en tiempo real')">
+      <div style="font-size:2.5rem">📷</div>
+      <div style="font-size:.75rem;color:#555;text-align:center;padding:0 8px">11 fotos operativas capturadas del grupo WhatsApp SGM</div>
+      <div style="font-size:.68rem;color:#888">Rodrigo Canihuante · Martin Kempf · Nicolas Olivares</div>
+    </div>
+    <div class="photo-card" style="background:#e0ede0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px">
+      <div style="font-size:1.8rem">🔌</div><div style="font-size:.72rem;color:#444;text-align:center;padding:0 8px">Reemplazo cruceta<br>Alim. Quilpué</div>
+      <div style="font-size:.65rem;color:#777">Rodrigo Canihuante · 31/05</div>
+    </div>
+    <div class="photo-card" style="background:#e8f5e8;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px">
+      <div style="font-size:1.8rem">🌿</div><div style="font-size:.72rem;color:#444;text-align:center;padding:0 8px">Árbol afectando red<br>"Una postal"</div>
+      <div style="font-size:.65rem;color:#777">Martin Kempf K · 30/05</div>
+    </div>
+    <div class="photo-card" style="background:#e0f0e0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px">
+      <div style="font-size:1.8rem">🏗️</div><div style="font-size:.72rem;color:#444;text-align:center;padding:0 8px">Postes MT<br>reemplazados</div>
+      <div style="font-size:.65rem;color:#777">Nicolas Olivares · 30/05</div>
+    </div>
+    <div class="photo-card" style="background:#e8eef8;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px">
+      <div style="font-size:1.8rem">📊</div><div style="font-size:.72rem;color:#444;text-align:center;padding:0 8px">Reunión COGRID<br>Quilpué</div>
+      <div style="font-size:.65rem;color:#777">Rodrigo Canihuante · 28/05</div>
+    </div>
+    <div class="photo-card" style="background:#f0e8f0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px">
+      <div style="font-size:1.8rem">🌊</div><div style="font-size:.72rem;color:#444;text-align:center;padding:0 8px">Informe CSN<br>Sismo M5.8</div>
+      <div style="font-size:.65rem;color:#777">Jorge Torres · 31/05</div>
+    </div>
+  </div>
 </div>
-<div class="section">
-  <h2>⚠️ Incidentes</h2>
-  <div class="inc-card"><div class="tc-fecha">🕐 30/05/2026 08:16</div><div class="tc-who">👷 Nicolas Olivares Chilquinta</div>4 Postes MT afectados en av. Atamirano por choque de vehículo. Coordinado con mantenimiento y Contratista.</div>
+
 </div>
-<div class="section">
-  <h2>💬 Feed Grupo SGM — 29 mensajes (26/5 → 1/6/2026)</h2>
-  <div class="feed"><div class="feed-day">26/5/2026</div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">RC</div><div class="feed-bubble"><div class="feed-who">Rodrigo Canihuante <span class="tag" style="background:#f59e0b22;color:#f59e0b">🔨 Trabajo</span></div>Buen dia, continuamos en ejecución de Mantenimiento Preventivo MN-2026-1238 / SAP 10206019. Reemplazo Crucetas Madera, Alim. Villa Dulce. Técnico: Sabino Cruz<div class="feed-meta">10:15</div></div></div><div class="feed-msg out"><div class="feed-avatar" style="background:#0ea5e9">FR</div><div class="feed-bubble bubble-out"><div class="feed-who">Felipe Rivera </div>Buen día, se envió correo con avance de PM a la fecha para su revisión. [Avance_PM_Chilquinta_Ene-Abr]<div class="feed-meta">11:54</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">DV</div><div class="feed-bubble"><div class="feed-who">Danny Valencia </div>quedo weno!<div class="feed-meta">12:19</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">RC</div><div class="feed-bubble"><div class="feed-who">Rodrigo Canihuante <span class="tag" style="background:#f59e0b22;color:#f59e0b">🔨 Trabajo</span></div>En proceso de reemplazo de Crucetas por emergencia, Alim. Marga Marga — Rec La Retuca Los Eucaliptos. Técnico: Sabino Cruz<div class="feed-meta">14:41</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">SA</div><div class="feed-bubble"><div class="feed-who">Sebastian Ahumada SAT </div>Detalle de presentaciones atendidas por SAT. 26 casos pendientes — incremento de órdenes distintas zonas durante el fin de semana.<div class="feed-meta">15:08</div></div></div><div class="feed-msg out"><div class="feed-avatar" style="background:#0ea5e9">FR</div><div class="feed-bubble bubble-out"><div class="feed-who">Felipe Rivera </div>Buena tarde, favor recordar compromisos calidad de producto. Tenemos actividades pendientes vencidas el 20 de Mayo.<div class="feed-meta">17:04</div></div></div><div class="feed-day">27/5/2026</div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">AA</div><div class="feed-bubble"><div class="feed-who">Adolfo Ampuero <span class="tag" style="background:#f59e0b22;color:#f59e0b">🔨 Trabajo</span></div>Buen dia, operación automática de Rec. Salida Rama Santo Domingo del Alim. San Juan por FST. SAT en inspección + Equipo Mtto.<div class="feed-meta">09:34</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">AA</div><div class="feed-bubble"><div class="feed-who">Adolfo Ampuero <span class="tag" style="background:#f59e0b22;color:#f59e0b">🔨 Trabajo</span></div>Se verifica puente MT cortado. Se realizará instalación de jumper con SAT y Mtto, para luego reparar con URENER.<div class="feed-meta">10:09</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">JC</div><div class="feed-bubble"><div class="feed-who">Juan Carlos Jaque Chqta <span class="tag" style="background:#f59e0b22;color:#f59e0b">🔨 Trabajo</span></div>Cambio crucetas alim. Pataguas — plan mtto. RREE: Franco Figueroa. Mtto: JC. Jaque. Retraso 1hr por equipo sin comunicación. 3 técnicos en exámenes ocupacionales.<div class="feed-meta">10:26</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">RA</div><div class="feed-bubble"><div class="feed-who">Rodrigo Arancibia <span class="tag" style="background:#f59e0b22;color:#f59e0b">🔨 Trabajo</span></div>Trabajos alim. el Sol, MN-2026-1005 / SAP 10206114. Mtto Marga Marga + cuadrilla Urener. Técnico: Gerardo Salgado.<div class="feed-meta">14:53</div></div></div><div class="feed-day">28/5/2026</div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">LO</div><div class="feed-bubble"><div class="feed-who">Luis Ortega Chilquinta <span class="tag" style="background:#f59e0b22;color:#f59e0b">🔨 Trabajo</span></div>Buenos días, instalación de silicona con robot de recubrimiento. [Foto terreno]<div class="feed-meta">10:04</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">RC</div><div class="feed-bubble"><div class="feed-who">Rodrigo Canihuante <span class="tag" style="background:#f59e0b22;color:#f59e0b">🔨 Trabajo</span></div>En ejecución MN-2026-1275 / SAP 10206429 — Instalación Separadores MT, Alim. Paso Hondo. Técnico: Gerardo Salgado.<div class="feed-meta">10:08</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">JT</div><div class="feed-bubble"><div class="feed-who">Jorge Torres Chqta </div>Despacho Electro activado y presentándose los apoyos<div class="feed-meta">10:38</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">JC</div><div class="feed-bubble"><div class="feed-who">Juan Carlos Jaque Chqta </div>Quillota reportada con 2 móviles<div class="feed-meta">11:22</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">LO</div><div class="feed-bubble"><div class="feed-who">Luis Ortega Chilquinta </div>Zona costa con tres móviles<div class="feed-meta">11:23</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">DV</div><div class="feed-bubble"><div class="feed-who">Danny Valencia </div>Caballeros, se necesita apoyo para inspección en zona Quillota. Compromisos vencidos — técnicos de otras zonas pueden apoyar.<div class="feed-meta">12:26</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">AA</div><div class="feed-bubble"><div class="feed-who">Adolfo Ampuero </div>Buenas tardes, San Antonio sin disponibilidad<div class="feed-meta">12:54</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">RC</div><div class="feed-bubble"><div class="feed-who">Rodrigo Canihuante </div>Lamentablemente sin Disponibilidad por MM<div class="feed-meta">12:58</div></div></div><div class="feed-day">29/5/2026</div><div class="feed-msg out"><div class="feed-avatar" style="background:#0ea5e9">FR</div><div class="feed-bubble bubble-out"><div class="feed-who">Felipe Rivera </div>Buena tarde, favor recordar compromisos calidad de producto. Actividades pendientes vencidas el 20 de Mayo. [Reporte_Planes_SEC_2026_29-05-2026]<div class="feed-meta">15:13</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">JV</div><div class="feed-bubble"><div class="feed-who">Julio Vega Chilquinta </div>Gracias Felipe<div class="feed-meta">15:15</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">RC</div><div class="feed-bubble"><div class="feed-who">Rodrigo Canihuante </div>En reunión COGRID comuna de Quilpué [foto]<div class="feed-meta">16:49</div></div></div><div class="feed-day">30/5/2026</div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">JC</div><div class="feed-bubble"><div class="feed-who">Juan Carlos Jaque Chqta <span class="tag" style="background:#f59e0b22;color:#f59e0b">🔨 Trabajo</span></div>DX programada: cambio masivo 34 crucetas y MV por oficio SEC. Recursos: 3 RRAA Eless, 2 RREE, 3 mtto, 1 Hidro, 1 empalme. Apoyo Rafael Allendes y Felipe Legua.<div class="feed-meta">06:47</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">NO</div><div class="feed-bubble"><div class="feed-who">Nicolas Olivares Chilquinta <span class="tag" style="background:#f9731622;color:#f97316">⚠️ Incidente</span></div>4 Postes MT afectados en av. Atamirano por choque de vehículo. Coordinado con mantenimiento y Contratista.<div class="feed-meta">08:16</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">JC</div><div class="feed-bubble"><div class="feed-who">Juan Carlos Jaque Chqta <span class="tag" style="background:#22c55e22;color:#22c55e">✅ Completado</span></div>Damos por finalizado los trabajos y el oficio asociado a quebrada alvarado. @Felipe haremos llegar informes para cargar en sistema.<div class="feed-meta">13:11</div></div></div><div class="feed-msg out"><div class="feed-avatar" style="background:#0ea5e9">FR</div><div class="feed-bubble bubble-out"><div class="feed-who">Felipe Rivera </div>Gracias JC 👍<div class="feed-meta">13:19</div></div></div><div class="feed-day">31/5/2026</div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">(</div><div class="feed-bubble"><div class="feed-who">(grupo) </div>Buenos días, órdenes controladas. Estamos monitoreando la ejecución de las presentaciones 👍<div class="feed-meta">10:57</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">JC</div><div class="feed-bubble"><div class="feed-who">Juan Carlos Jaque Chqta <span class="tag" style="background:#ef444422;color:#ef4444">🔴 Sismo</span></div>[SISMO] Hora Local: 31/05/2026 17:34:18 | MAG: 5.8 Mwp | Prof: 30 km | 28 km al O de Quintero | Coord: Lat -32.77 Lon -71.82<div class="feed-meta">17:40</div></div></div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">JT</div><div class="feed-bubble"><div class="feed-who">Jorge Torres Chqta <span class="tag" style="background:#ef444422;color:#ef4444">🔴 Sismo</span></div>[CSN - ÚLTIMOS SISMOS] 2026-05-31 17:34:18 | 28 km al O de Quintero | Prof: 30 km | MAG: 5.8<div class="feed-meta">17:40</div></div></div><div class="feed-day">01/6/2026</div><div class="feed-msg"><div class="feed-avatar" style="background:#005e3a">RC</div><div class="feed-bubble"><div class="feed-who">Rodrigo Canihuante <span class="tag" style="background:#f59e0b22;color:#f59e0b">🔨 Trabajo</span></div>En ejecución reemplazo de cruceta alim. Quilpué — Rec Roosevelt berna. Apoyo SIMANTEC, supervisado Mtto y EH&S. [foto trabajo con grúa]<div class="feed-meta">10:27</div></div></div></div>
-</div>
-</div>
+
 <footer>
-  <p>Dashboard generado automáticamente desde grupo WhatsApp SGM Chilquinta</p>
-  <p style="margin-top:4px">📅 martes, 2 de junio de 2026 06:23 a. m. &nbsp;·&nbsp; <a href="https://friveraurbina-dot.github.io/sgmdistribucion/">🌐 Ver en línea</a></p>
+  SGM Distribución · Coordinación Operacional Chilquinta &nbsp;|&nbsp;
+  <a href="https://friveraurbina-dot.github.io/sgmdistribucion/" target="_blank">🔗 Ver Dashboard Online</a>
+  &nbsp;|&nbsp; Período: 28 mayo – 2 junio 2026 &nbsp;|&nbsp; Generado 11:18 el Tuesday 02 de June de 2026
 </footer>
+
 </body>
 </html>
