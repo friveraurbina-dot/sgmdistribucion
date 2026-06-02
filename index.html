@@ -4,3 +4,266 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SGM — Dashboard Operacional Chilquinta</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green-dark: #005e3a;
+    --green: #00875a;
+    --green-light: #00c887;
+    --bg: #0f1117;
+    --card: #161b27;
+    --card2: #1a2030;
+    --border: #1e2a3a;
+    --text: #e8eaf0;
+    --muted: #7a8599;
+    --amber: #ff8f00;
+    --green-ok: #4caf50;
+    --red: #ef5350;
+  }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+  
+  .header { 
+    background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 60%, #00a870 100%);
+    padding: 22px 28px; display: flex; justify-content: space-between; align-items: center;
+    box-shadow: 0 4px 20px rgba(0,135,90,0.3);
+  }
+  .header-left h1 { font-size: 20px; font-weight: 700; color: #fff; letter-spacing: .5px; }
+  .header-left .subtitle { font-size: 12px; color: rgba(255,255,255,.7); margin-top: 3px; }
+  .header-right { text-align: right; font-size: 11px; color: rgba(255,255,255,.75); line-height: 1.7; }
+  .pill { display: inline-block; background: rgba(255,255,255,.15); border-radius: 12px; padding: 2px 10px; font-size: 10px; margin-top: 4px; }
+  
+  .container { max-width: 1280px; margin: 0 auto; padding: 24px 20px; }
+  
+  .kpi-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-bottom: 24px; }
+  .kpi-card {
+    background: var(--card); border-radius: 14px; padding: 18px 14px; text-align: center;
+    border: 1px solid var(--border); transition: transform .2s, box-shadow .2s;
+  }
+  .kpi-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.3); }
+  .kpi-num { font-size: 30px; font-weight: 800; color: #4db6ac; line-height: 1; }
+  .kpi-label { font-size: 11px; color: var(--muted); margin-top: 6px; text-transform: uppercase; letter-spacing: .5px; }
+  
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 20px; }
+  .section { background: var(--card); border-radius: 14px; padding: 20px; border: 1px solid var(--border); }
+  .section-title { font-size: 13px; font-weight: 700; color: var(--green-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+  
+  .zone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .zone-item { background: linear-gradient(135deg, #0d4f3e, #0d7060); border-radius: 10px; padding: 10px 14px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  
+  .sismo-box {
+    background: linear-gradient(135deg, #1a0808, #2c1010);
+    border: 1px solid rgba(239,83,80,.3); border-radius: 12px; padding: 20px; text-align: center;
+  }
+  .sismo-mag { font-size: 42px; font-weight: 900; color: var(--red); line-height: 1; }
+  .sismo-detail { font-size: 12px; color: #ffcdd2; margin-top: 8px; line-height: 1.8; }
+  .sismo-status { margin-top: 12px; padding: 6px 14px; background: rgba(239,83,80,.12); border: 1px solid rgba(239,83,80,.25); border-radius: 20px; font-size: 11px; color: #ef9a9a; display: inline-block; }
+  
+  .works-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 12px; margin-bottom: 20px; }
+  .work-card { background: var(--card2); border-radius: 10px; padding: 14px 16px; }
+  .work-fecha { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; }
+  .work-titulo { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+  .work-desc { font-size: 11px; color: var(--muted); line-height: 1.4; }
+  
+  .feed-wrap { background: var(--card); border-radius: 14px; border: 1px solid var(--border); overflow: hidden; margin-bottom: 20px; }
+  .feed-header { padding: 16px 20px 14px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  .feed-body { max-height: 520px; overflow-y: auto; padding: 14px; }
+  .feed-body::-webkit-scrollbar { width: 4px; }
+  .feed-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  
+  .msg-item { padding: 10px 14px; margin-bottom: 6px; background: var(--card2); border-radius: 8px; border-left: 3px solid var(--border); }
+  .msg-item:hover { border-left-color: var(--green-light); }
+  .msg-meta { font-size: 10px; color: var(--muted); margin-bottom: 4px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .msg-text { font-size: 12px; color: #cfd8e3; line-height: 1.5; }
+  
+  .badge-tipo { padding: 1px 7px; border-radius: 10px; font-size: 10px; font-weight: 600; }
+  .badge-activo { background: rgba(255,143,0,.15); color: #ffb74d; }
+  .badge-completado { background: rgba(76,175,80,.15); color: #81c784; }
+  .badge-sismo { background: rgba(239,83,80,.15); color: #ef9a9a; }
+  .badge-alerta { background: rgba(230,81,0,.15); color: #ffb74d; }
+  .badge-info { background: rgba(84,110,122,.15); color: #90a4ae; }
+  
+  .footer { text-align: center; padding: 20px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--border); }
+  .footer a { color: var(--green-light); text-decoration: none; }
+  
+  @media (max-width: 900px) {
+    .kpi-row { grid-template-columns: repeat(3,1fr); }
+    .grid-2 { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .kpi-row { grid-template-columns: repeat(2,1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <h1>⚡ SGM — Dashboard Operacional</h1>
+    <div class="subtitle">Coordinación Eléctrica · Chilquinta · Período 26 May – 2 Jun 2026</div>
+  </div>
+  <div class="header-right">
+    <div>📅 Tuesday, 02 de June de 2026</div>
+    <div>🕐 Actualización: 02/06/2026 08:34</div>
+    <div><span class="pill">⏱ Auto-actualiza cada hora</span></div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- KPIs -->
+  <div class="kpi-row">
+    <div class="kpi-card">
+      <div class="kpi-num" style="color: #4caf50; font-size:26px">🟢 NORMAL</div>
+      <div class="kpi-label">Estado General</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-num" style="color: var(--amber)">7</div>
+      <div class="kpi-label">Trabajos Activos</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-num" style="color: var(--green-ok)">3</div>
+      <div class="kpi-label">Completados</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-num">49</div>
+      <div class="kpi-label">Mensajes Período</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-num" style="color: var(--red)">1</div>
+      <div class="kpi-label">Eventos Sísmicos</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-num" style="color: #4db6ac">16</div>
+      <div class="kpi-label">Mensajes c/ Foto</div>
+    </div>
+  </div>
+
+  <!-- Estado Zonas + Sismo -->
+  <div class="grid-2">
+    <div class="section">
+      <div class="section-title">🗺️ Estado Operacional por Zona</div>
+      <div class="zone-grid">
+        <div class="zone-item">🟢 San Antonio</div>
+        <div class="zone-item">🟢 Valparaíso</div>
+        <div class="zone-item">🟢 Marga Marga</div>
+        <div class="zone-item">🟢 Costa</div>
+        <div class="zone-item">🟢 Quillota</div>
+        <div class="zone-item">🟢 Aconcagua</div>
+      </div>
+      <div style="margin-top:14px; padding:10px 14px; background:rgba(76,175,80,.1); border:1px solid rgba(76,175,80,.25); border-radius:10px; font-size:12px; color:#a5d6a7;">
+        ✅ Todas las zonas operando con normalidad · Sin cortes activos reportados
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">🌍 Evento Sísmico Reciente</div>
+      <div class="sismo-box">
+        <div class="sismo-mag">M 5.8</div>
+        <div class="sismo-detail">
+          📅 31 de Mayo 2026 — 17:34:18<br>
+          📍 28 km al Oeste de Quintero<br>
+          🔵 Profundidad: 30 km<br>
+          🏢 Red: Chilquinta
+        </div>
+        <div class="sismo-status">Sin daños reportados en infraestructura SGM</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trabajos -->
+  <div class="section" style="margin-bottom:20px">
+    <div class="section-title">🔧 Trabajos del Período (26 May – 2 Jun 2026)</div>
+    <div class="works-grid">
+
+    <div class="work-card" style="border-left:4px solid #ff8f00">
+      <div class="work-fecha">26/5 · <span style="color:#ff8f00">ACTIVO</span></div>
+      <div class="work-titulo">Reemplazo Crucetas MN-2026-1238</div>
+      <div class="work-desc">Alim. Villa Dulce · Técnico: Sabino Cruz</div>
+    </div>
+
+    <div class="work-card" style="border-left:4px solid #ff8f00">
+      <div class="work-fecha">26/5 · <span style="color:#ff8f00">ACTIVO</span></div>
+      <div class="work-titulo">Reemplazo Crucetas emergencia Marga Marga</div>
+      <div class="work-desc">Rec La Retuca Los Eucaliptos · Tec: Sabino Cruz</div>
+    </div>
+
+    <div class="work-card" style="border-left:4px solid #ff8f00">
+      <div class="work-fecha">28/5 · <span style="color:#ff8f00">ACTIVO</span></div>
+      <div class="work-titulo">Instalación Separadores MT MN-2026-1275</div>
+      <div class="work-desc">Alim. Paso Hondo · Técnico: Gerardo Salgado</div>
+    </div>
+
+    <div class="work-card" style="border-left:4px solid #4caf50">
+      <div class="work-fecha">28/5 · <span style="color:#4caf50">COMPLETADO</span></div>
+      <div class="work-titulo">Cambio Crucetas Alim. Pangal</div>
+      <div class="work-desc">Plan de Mtto · Técnico: Oscar Guerrero</div>
+    </div>
+
+    <div class="work-card" style="border-left:4px solid #ff8f00">
+      <div class="work-fecha">29/5 · <span style="color:#ff8f00">ACTIVO</span></div>
+      <div class="work-titulo">Trabajos caso SEC accidente tercero</div>
+      <div class="work-desc">Claudio González V. · Coordinado con SAT</div>
+    </div>
+
+    <div class="work-card" style="border-left:4px solid #4caf50">
+      <div class="work-fecha">30/5 · <span style="color:#4caf50">COMPLETADO</span></div>
+      <div class="work-titulo">Trabajos Quebrada Alvarado</div>
+      <div class="work-desc">Solo falta normalizar esquema</div>
+    </div>
+
+    <div class="work-card" style="border-left:4px solid #ff8f00">
+      <div class="work-fecha">1/6 · <span style="color:#ff8f00">ACTIVO</span></div>
+      <div class="work-titulo">Reemplazo cruceta Alim. Quilpué</div>
+      <div class="work-desc">Aguas abajo Rec Roosevelt Berna · SIMANTEC + EH&S</div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Feed mensajes -->
+  <div class="feed-wrap">
+    <div class="feed-header">
+      <div class="section-title" style="margin:0;border:none;padding:0">💬 Feed del Grupo SGM</div>
+      <div style="font-size:11px;color:var(--muted)">49 mensajes · 26 May – 1 Jun 2026</div>
+    </div>
+    <div class="feed-body">
+
+    <div class="msg-item">
+      <div class="msg-meta">26/5/2026 10:15 · <strong>Rodrigo Canihuante</strong> <span class="badge-tipo badge-activo">activo</span></div>
+      <div class="msg-text">Buen dia, continuamos en ejecución de Mantenimiento Preventivo MN-2026-1238, aviso SAP 10206019, reemplazo de Crucetas de Madera en Alimentador Villa Dulce. Técnico en terreno Sabino Cruz</div>
+    </div>
+
+    <div class="msg-item">
+      <div class="msg-meta">26/5/2026 11:54 · <strong>Felipe</strong> <span class="badge-tipo badge-info">info</span></div>
+      <div class="msg-text">Buen día, se envió correo con avance de PM a la fecha, para su revisión. 📷</div>
+    </div>
+
+    <div class="msg-item">
+      <div class="msg-meta">26/5/2026 12:19 · <strong>Danny Valencia</strong> <span class="badge-tipo badge-info">info</span></div>
+      <div class="msg-text">quedo weno!</div>
+    </div>
+
+    <div class="msg-item">
+      <div class="msg-meta">26/5/2026 14:41 · <strong>Rodrigo Canihuante</strong> <span class="badge-tipo badge-activo">activo</span></div>
+      <div class="msg-text">En proceso de reemplazo de Crucetas por emergencia, Alimentador Marga Marga, Rec La Retuca Los Eucaliptos. Técnico en terreno Sabino Cruz</div>
+    </div>
+
+    <div class="msg-item">
+      <div class="msg-meta">26/5/2026 15:08 · <strong>Sebastian Ahumada SAT</strong> <span class="badge-tipo badge-info">info</span></div>
+      <div class="msg-text">Estimados, adjunto detalle de presentaciones atendidas por SAT al día de hoy. Actualmente mantenemos 26 casos pendientes. 📷</div>
+    </div>
+
+    <div class="msg-item">
+      <div class="msg-meta">26/5/2026 17:04 · <strong>Felipe</strong> <span class="badge-tipo badge-info">info</span></div>
+      <div class="msg-text">Buena tarde, favor recordar compromisos calidad de producto. Tenemos actividades pendientes vencidas el 20 de Mayo.</div>
+    </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <a href="https://friveraurbina-dot.github.io/sgmdistribucion/" target="_blank">🔗 sgmdistribucion</a>
+  &nbsp;·&nbsp; Dashboard SGM — Coordinación Eléctrica Chilquinta &nbsp;·&nbsp; Auto-generado 02/06/2026 08:34
+</footer>
+
+</body>
+</html>
