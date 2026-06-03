@@ -242,3 +242,4 @@ def main():
         log('\n→ No se requirieron actualizaciones externas en esta ejecución.')
 
 if __name__ == '__main__':
+    main()
