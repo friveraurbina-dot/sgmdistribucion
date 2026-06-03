@@ -1,23 +1,24 @@
 {
-  "grupo": "SGM",
-  "actualizado": "2026-06-03T19:33:25",
-  "fecha_inicio": "2026-06-01",
+  "resumen": {
+    "descripcion_general": "Auditoría en terreno activa. Técnicos operando bajo supervisión externa.",
+    "total_actividades": 2,
+    "total_fotos": 0,
+    "tecnicos_activos": 2,
+    "avance_pct": 45,
+    "ultima_actualizacion": "2026-06-03T12:44:00"
+  },
   "actividades": [
     {
-      "fecha": "2026-06-03",
-      "hora": "12:44",
-      "autor": "Martin Kempf K",
-      "texto": "sería bueno una nota que nos estan auditando y los auditores estan en terreno!",
-      "tiene_foto": false,
-      "foto_url": ""
+      "timestamp": "2026-06-03T12:44:00",
+      "tipo": "Aviso Operacional",
+      "descripcion": "[Martin Kempf K] sería bueno una nota que nos estan auditando y los auditores estan en terreno!",
+      "fotos": []
     },
     {
-      "fecha": "2026-06-03",
-      "hora": "12:44",
-      "autor": "Julio Vega Chilquinta",
-      "texto": "Oka!",
-      "tiene_foto": false,
-      "foto_url": ""
+      "timestamp": "2026-06-03T12:44:00",
+      "tipo": "Confirmación",
+      "descripcion": "[Julio Vega Chilquinta] Oka!",
+      "fotos": []
     }
   ]
 }
