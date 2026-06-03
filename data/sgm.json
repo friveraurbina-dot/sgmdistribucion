@@ -1,44 +1,23 @@
 {
+  "grupo": "SGM",
+  "actualizado": "2026-06-03T19:33:25",
+  "fecha_inicio": "2026-06-01",
   "actividades": [
     {
-      "id": "sgm-20260603-001",
-      "timestamp": "2026-06-03T12:21:00",
+      "fecha": "2026-06-03",
+      "hora": "12:44",
+      "autor": "Martin Kempf K",
+      "texto": "sería bueno una nota que nos estan auditando y los auditores estan en terreno!",
+      "tiene_foto": false,
+      "foto_url": ""
+    },
+    {
+      "fecha": "2026-06-03",
+      "hora": "12:44",
       "autor": "Julio Vega Chilquinta",
-      "tipo": "OPERACIONAL",
-      "descripcion": "Feedback primer semestre 2026: Se enviaron citas a los equipos para entrega de feedback según planes de desarrollo. Cada sesión de máximo 30 minutos.",
-      "fotos": []
-    },
-    {
-      "id": "sgm-20260602-003",
-      "timestamp": "2026-06-02T10:48:00",
-      "autor": "Hernan Chqta",
-      "tipo": "OPERACIONAL",
-      "descripcion": "Capacitación Análisis de Falla: Mantenimiento – Obras – Filiales – Operación. Sesión presencial con equipos de todas las áreas.",
-      "fotos": []
-    },
-    {
-      "id": "sgm-20260602-002",
-      "timestamp": "2026-06-02T10:41:00",
-      "autor": "Juan Carlos Jaque Chqta",
-      "tipo": "OPERACIONAL",
-      "descripcion": "Mesa de trabajo con Municipalidad de La Cruz (José Guerrero y Alexis Palacios). Temas tratados: variaciones de voltaje, aumentos de capacidad de consumos Municipalidad, poda y nuevas urbanizaciones.",
-      "fotos": []
-    },
-    {
-      "id": "sgm-20260601-001",
-      "timestamp": "2026-06-01T10:27:00",
-      "autor": "Rodrigo Canihuante",
-      "tipo": "EN PROGRESO",
-      "descripcion": "En ejecución reemplazo de cruceta en alimentador Quilpué, aguas abajo de Rec Roosevelt Berna. Caso puntual y particular. Apoyo de SIMANTEC, supervisado en terreno por Mtto y EH&S.",
-      "fotos": []
+      "texto": "Oka!",
+      "tiene_foto": false,
+      "foto_url": ""
     }
-  ],
-  "resumen": {
-    "total_actividades": 4,
-    "total_fotos": 0,
-    "tecnicos_activos": 4,
-    "avance_pct": 80,
-    "descripcion_general": "4 actividades registradas en junio 2026 · Reemplazo cruceta Quilpué en progreso · Capacitación análisis de falla completada · Mesa trabajo Municipalidad La Cruz",
-    "ultima_actualizacion": "2026-06-03T12:21:00"
-  }
+  ]
 }
