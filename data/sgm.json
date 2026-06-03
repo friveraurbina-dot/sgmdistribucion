@@ -1,11 +1,44 @@
 {
-  "actividades": [],
+  "actividades": [
+    {
+      "id": "sgm-20260603-001",
+      "timestamp": "2026-06-03T12:21:00",
+      "autor": "Julio Vega Chilquinta",
+      "tipo": "OPERACIONAL",
+      "descripcion": "Feedback primer semestre 2026: citas enviadas a equipos para revision de planes de desarrollo. Sesiones de 30 minutos.",
+      "fotos": []
+    },
+    {
+      "id": "sgm-20260602-003",
+      "timestamp": "2026-06-02T10:48:00",
+      "autor": "Hernan Chqta",
+      "tipo": "OPERACIONAL",
+      "descripcion": "Capacitacion Analisis de Falla: Mantenimiento - Obras - Filiales - Operacion. Sesion presencial con equipos de todas las areas.",
+      "fotos": []
+    },
+    {
+      "id": "sgm-20260602-002",
+      "timestamp": "2026-06-02T10:41:00",
+      "autor": "Juan Carlos Jaque Chqta",
+      "tipo": "OPERACIONAL",
+      "descripcion": "Mesa de trabajo con Municipalidad de La Cruz (Jose Guerrero y Alexis Palacios). Temas: variaciones de voltaje, aumentos de capacidad, poda y nuevas urbanizaciones.",
+      "fotos": []
+    },
+    {
+      "id": "sgm-20260601-001",
+      "timestamp": "2026-06-01T10:27:00",
+      "autor": "Rodrigo Canihuante",
+      "tipo": "EN PROGRESO",
+      "descripcion": "En ejecucion reemplazo de cruceta en alimentador Quilpue, aguas abajo de Rec Roosevelt Berna. Apoyo de SIMANTEC, supervisado por Mtto y EH&S.",
+      "fotos": []
+    }
+  ],
   "resumen": {
-    "total_actividades": 0,
+    "total_actividades": 4,
     "total_fotos": 0,
-    "tecnicos_activos": 0,
-    "avance_pct": 0,
-    "descripcion_general": "Sin actividades registradas. Ejecuta el extractor para comenzar.",
-    "ultima_actualizacion": null
+    "tecnicos_activos": 4,
+    "avance_pct": 80,
+    "descripcion_general": "4 actividades junio 2026. Reemplazo cruceta Quilpue en progreso. Capacitacion analisis de falla completada. Mesa trabajo Municipalidad La Cruz.",
+    "ultima_actualizacion": "2026-06-03T12:21:00"
   }
 }
