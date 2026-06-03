@@ -1,32 +1,15 @@
 {
+  "grupo": "Reporte SAT Costa_MM",
+  "actualizado": "2026-06-03T19:33:25",
+  "fecha_inicio": "2026-06-01",
   "actividades": [
     {
-      "id": "sat-20260603-001",
-      "timestamp": "2026-06-03T12:36:00",
-      "autor": "~SSSGF-99 VINISE",
-      "tipo": "EN PROGRESO",
-      "descripcion": "9 fotos enviadas desde terreno",
-      "fotos": [],
-      "po": null,
-      "sed": null
-    },
-    {
-      "id": "sat-20260602-001",
-      "timestamp": "2026-06-02T09:00:00",
-      "autor": "J.Almendares / J.Muñoz",
-      "tipo": "OPERACIONAL",
-      "descripcion": "Reporte sin Interrupción SAT · Po: 1607099 · Equipo SED: 20282 · Causa: defecto de material · Tirante cortado por fatiga (oxidado) en poste nro. 672747, SED 20282 Salas Cousiño. Se deja enrollado a un costado de la calzada señalizado con cinta de peligro. Se solicita reemplazo.",
-      "fotos": [],
-      "po": "1607099",
-      "sed": "20282"
+      "fecha": "2026-06-03",
+      "hora": "15:11",
+      "autor": "Cristian Tirado Chqta",
+      "texto": "Junto con saludar, se envía información entregada por Bomberos de Quintero respecto a poste traccionado por camión en calle Lazo con avenida Yungay, comuna de Quintero.\n\nAntecedentes:\nSED: 24059\nAlimentador: Maitenes\nNodo/Rótulo: 223247\nTipo: poste BT",
+      "tiene_foto": false,
+      "foto_url": ""
     }
-  ],
-  "resumen": {
-    "total_actividades": 2,
-    "total_fotos": 0,
-    "tecnicos_activos": 3,
-    "avance_pct": 75,
-    "descripcion_general": "2 reportes SAT activos · SED 20282 Salas Cousiño con tirante por reemplazar · Cuadrilla VINISE con 9 fotos de terreno",
-    "ultima_actualizacion": "2026-06-03T12:36:00"
-  }
+  ]
 }
