@@ -1,58 +1,100 @@
 {
-  "actualizado": "2026-06-14T08:56:45",
+  "actualizado": "2026-06-14T15:29:22",
   "fecha": "14 de June, 2026",
   "ciudades": [
     {
+      "ciudad": "Valparaíso",
+      "max": 20,
+      "min": 12,
+      "condicion": "Parcialmente nublado"
+    },
+    {
+      "ciudad": "Viña del Mar",
+      "max": 19,
+      "min": 11,
+      "condicion": "Parcialmente nublado"
+    },
+    {
+      "ciudad": "Quillota",
+      "max": 20,
+      "min": 9,
+      "condicion": "Parcialmente nublado"
+    },
+    {
       "ciudad": "Los Andes",
-      "max": 24,
+      "max": 21,
+      "min": 9,
+      "condicion": "Despejado"
+    },
+    {
+      "ciudad": "Casablanca",
+      "max": 19,
+      "min": 10,
+      "condicion": "Nublado"
+    },
+    {
+      "ciudad": "San Antonio",
+      "max": 18,
+      "min": 10,
+      "condicion": "Nublado"
+    },
+    {
+      "ciudad": "Petorca",
+      "max": 23,
+      "min": 12,
+      "condicion": "Despejado"
+    },
+    {
+      "ciudad": "La Ligua",
+      "max": 20,
       "min": 10,
       "condicion": "Parcialmente nublado"
     },
     {
-      "ciudad": "Casablanca",
-      "max": 18,
-      "min": 6,
+      "ciudad": "Putaendo",
+      "max": 20,
+      "min": 10,
       "condicion": "Parcialmente nublado"
     },
     {
-      "ciudad": "La Ligua",
-      "max": 16,
-      "min": 8,
+      "ciudad": "Papudo",
+      "max": 17,
+      "min": 10,
       "condicion": "Parcialmente nublado"
     }
   ],
   "horas": [
     {
       "hora": "06:00",
-      "temp": 10
+      "temp": 12
     },
     {
       "hora": "08:00",
-      "temp": 12
-    },
-    {
-      "hora": "10:00",
       "temp": 14
     },
     {
+      "hora": "10:00",
+      "temp": 16
+    },
+    {
       "hora": "12:00",
-      "temp": 24
-    },
-    {
-      "hora": "14:00",
-      "temp": 23
-    },
-    {
-      "hora": "16:00",
-      "temp": 22
-    },
-    {
-      "hora": "18:00",
       "temp": 20
     },
     {
+      "hora": "14:00",
+      "temp": 19
+    },
+    {
+      "hora": "16:00",
+      "temp": 18
+    },
+    {
+      "hora": "18:00",
+      "temp": 16
+    },
+    {
       "hora": "20:00",
-      "temp": 12
+      "temp": 14
     }
   ]
 }
