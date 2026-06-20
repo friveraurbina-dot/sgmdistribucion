@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-06-20T08:33:29",
+  "actualizado": "2026-06-20T15:25:00",
   "fecha": "20 de June, 2026",
   "ciudades": [
     {
@@ -17,7 +17,7 @@
     {
       "ciudad": "La Ligua",
       "max": 17,
-      "min": 8,
+      "min": 7,
       "condicion": "Parcialmente nublado"
     }
   ],
