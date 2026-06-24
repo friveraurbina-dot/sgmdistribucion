@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-06-23T17:21:24",
-  "fecha": "23 de June, 2026",
+  "actualizado": "2026-06-24T00:14:18",
+  "fecha": "24 de June, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
@@ -10,14 +10,14 @@
     },
     {
       "ciudad": "Casablanca",
-      "max": 14,
-      "min": 2,
+      "max": 15,
+      "min": 1,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "La Ligua",
       "max": 16,
-      "min": 5,
+      "min": 4,
       "condicion": "Parcialmente nublado"
     }
   ],
