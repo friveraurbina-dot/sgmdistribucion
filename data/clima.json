@@ -1,58 +1,58 @@
 {
-  "actualizado": "2026-06-28T18:56:46",
-  "fecha": "28 de June, 2026",
+  "actualizado": "2026-06-29T12:50:08",
+  "fecha": "29 de June, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
-      "max": 19,
-      "min": 3,
+      "max": 20,
+      "min": 7,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "Casablanca",
-      "max": 18,
-      "min": 4,
+      "max": 16,
+      "min": 5,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "La Ligua",
-      "max": 22,
-      "min": 6,
+      "max": 17,
+      "min": 7,
       "condicion": "Parcialmente nublado"
     }
   ],
   "horas": [
     {
       "hora": "06:00",
-      "temp": 3
-    },
-    {
-      "hora": "08:00",
-      "temp": 5
-    },
-    {
-      "hora": "10:00",
       "temp": 7
     },
     {
+      "hora": "08:00",
+      "temp": 9
+    },
+    {
+      "hora": "10:00",
+      "temp": 11
+    },
+    {
       "hora": "12:00",
-      "temp": 19
+      "temp": 20
     },
     {
       "hora": "14:00",
-      "temp": 18
+      "temp": 19
     },
     {
       "hora": "16:00",
-      "temp": 17
+      "temp": 18
     },
     {
       "hora": "18:00",
-      "temp": 15
+      "temp": 16
     },
     {
       "hora": "20:00",
-      "temp": 5
+      "temp": 9
     }
   ]
 }
