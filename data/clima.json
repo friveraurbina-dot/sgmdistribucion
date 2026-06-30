@@ -1,38 +1,38 @@
 {
-  "actualizado": "2026-06-30T11:59:16",
+  "actualizado": "2026-06-30T21:17:39",
   "fecha": "30 de June, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
       "max": 19,
-      "min": 5,
+      "min": 4,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "Casablanca",
       "max": 12,
-      "min": 3,
+      "min": 1,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "La Ligua",
-      "max": 15,
-      "min": 5,
+      "max": 14,
+      "min": 3,
       "condicion": "Parcialmente nublado"
     }
   ],
   "horas": [
     {
       "hora": "06:00",
-      "temp": 5
+      "temp": 4
     },
     {
       "hora": "08:00",
-      "temp": 7
+      "temp": 6
     },
     {
       "hora": "10:00",
-      "temp": 9
+      "temp": 8
     },
     {
       "hora": "12:00",
@@ -52,7 +52,7 @@
     },
     {
       "hora": "20:00",
-      "temp": 7
+      "temp": 6
     }
   ]
 }
