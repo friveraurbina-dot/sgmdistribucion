@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-07-02T08:29:52",
+  "actualizado": "2026-07-02T11:35:06",
   "fecha": "2 de July, 2026",
   "ciudades": [
     {
@@ -10,7 +10,7 @@
     },
     {
       "ciudad": "Casablanca",
-      "max": 13,
+      "max": 14,
       "min": 2,
       "condicion": "Parcialmente nublado"
     },
