@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-07-03T11:33:35",
+  "actualizado": "2026-07-03T16:25:57",
   "fecha": "3 de July, 2026",
   "ciudades": [
     {
@@ -10,14 +10,14 @@
     },
     {
       "ciudad": "Casablanca",
-      "max": 14,
-      "min": 3,
+      "max": 13,
+      "min": 2,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "La Ligua",
       "max": 15,
-      "min": 4,
+      "min": 3,
       "condicion": "Parcialmente nublado"
     }
   ],
