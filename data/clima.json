@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-07-03T22:05:30",
-  "fecha": "3 de July, 2026",
+  "actualizado": "2026-07-04T06:21:55",
+  "fecha": "4 de July, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
@@ -10,14 +10,14 @@
     },
     {
       "ciudad": "Casablanca",
-      "max": 13,
+      "max": 12,
       "min": 2,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "La Ligua",
-      "max": 14,
-      "min": 3,
+      "max": 15,
+      "min": 4,
       "condicion": "Parcialmente nublado"
     }
   ],
