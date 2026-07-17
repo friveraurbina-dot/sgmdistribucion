@@ -1,11 +1,11 @@
 {
-  "actualizado": "2026-07-17T16:16:12",
+  "actualizado": "2026-07-17T21:54:58",
   "fecha": "17 de July, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
       "max": 10,
-      "min": 6,
+      "min": 7,
       "condicion": "Parcialmente nublado"
     },
     {
@@ -24,15 +24,15 @@
   "horas": [
     {
       "hora": "06:00",
-      "temp": 6
+      "temp": 7
     },
     {
       "hora": "08:00",
-      "temp": 8
+      "temp": 9
     },
     {
       "hora": "10:00",
-      "temp": 10
+      "temp": 11
     },
     {
       "hora": "12:00",
@@ -52,7 +52,7 @@
     },
     {
       "hora": "20:00",
-      "temp": 8
+      "temp": 9
     }
   ]
 }
