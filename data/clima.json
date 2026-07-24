@@ -1,11 +1,11 @@
 {
-  "actualizado": "2026-07-24T11:04:07",
+  "actualizado": "2026-07-24T16:43:35",
   "fecha": "24 de July, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
       "max": 21,
-      "min": 7,
+      "min": 8,
       "condicion": "Parcialmente nublado"
     },
     {
@@ -16,7 +16,7 @@
     },
     {
       "ciudad": "La Ligua",
-      "max": 22,
+      "max": 21,
       "min": 10,
       "condicion": "Parcialmente nublado"
     }
@@ -24,15 +24,15 @@
   "horas": [
     {
       "hora": "06:00",
-      "temp": 7
+      "temp": 8
     },
     {
       "hora": "08:00",
-      "temp": 9
+      "temp": 10
     },
     {
       "hora": "10:00",
-      "temp": 11
+      "temp": 12
     },
     {
       "hora": "12:00",
@@ -52,7 +52,7 @@
     },
     {
       "hora": "20:00",
-      "temp": 9
+      "temp": 10
     }
   ]
 }
