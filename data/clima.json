@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-07-29T22:01:47",
-  "fecha": "29 de July, 2026",
+  "actualizado": "2026-07-30T05:42:12",
+  "fecha": "30 de July, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
@@ -10,7 +10,7 @@
     },
     {
       "ciudad": "Casablanca",
-      "max": 20,
+      "max": 18,
       "min": 9,
       "condicion": "Parcialmente nublado"
     },
