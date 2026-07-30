@@ -1,10 +1,10 @@
 {
-  "actualizado": "2026-07-30T16:27:31",
+  "actualizado": "2026-07-30T22:07:35",
   "fecha": "30 de July, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
-      "max": 20,
+      "max": 21,
       "min": 9,
       "condicion": "Parcialmente nublado"
     },
@@ -36,19 +36,19 @@
     },
     {
       "hora": "12:00",
-      "temp": 20
+      "temp": 21
     },
     {
       "hora": "14:00",
-      "temp": 19
+      "temp": 20
     },
     {
       "hora": "16:00",
-      "temp": 18
+      "temp": 19
     },
     {
       "hora": "18:00",
-      "temp": 16
+      "temp": 17
     },
     {
       "hora": "20:00",
