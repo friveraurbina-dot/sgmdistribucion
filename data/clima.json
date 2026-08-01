@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-08-01T05:56:14",
+  "actualizado": "2026-08-01T10:41:32",
   "fecha": "1 de August, 2026",
   "ciudades": [
     {
@@ -10,13 +10,13 @@
     },
     {
       "ciudad": "Casablanca",
-      "max": 14,
+      "max": 15,
       "min": 7,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "La Ligua",
-      "max": 15,
+      "max": 16,
       "min": 8,
       "condicion": "Parcialmente nublado"
     }
