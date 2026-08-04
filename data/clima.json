@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-08-04T05:47:59",
+  "actualizado": "2026-08-04T11:24:11",
   "fecha": "4 de August, 2026",
   "ciudades": [
     {
@@ -16,8 +16,8 @@
     },
     {
       "ciudad": "La Ligua",
-      "max": 17,
-      "min": 9,
+      "max": 18,
+      "min": 10,
       "condicion": "Parcialmente nublado"
     }
   ],
