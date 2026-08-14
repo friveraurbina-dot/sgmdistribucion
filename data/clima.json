@@ -1,10 +1,10 @@
 {
-  "actualizado": "2026-08-14T10:03:23",
+  "actualizado": "2026-08-14T15:52:52",
   "fecha": "14 de August, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
-      "max": 16,
+      "max": 15,
       "min": 8,
       "condicion": "Parcialmente nublado"
     },
@@ -36,19 +36,19 @@
     },
     {
       "hora": "12:00",
-      "temp": 16
-    },
-    {
-      "hora": "14:00",
       "temp": 15
     },
     {
-      "hora": "16:00",
+      "hora": "14:00",
       "temp": 14
     },
     {
+      "hora": "16:00",
+      "temp": 13
+    },
+    {
       "hora": "18:00",
-      "temp": 12
+      "temp": 11
     },
     {
       "hora": "20:00",
