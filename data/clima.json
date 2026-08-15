@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-08-14T21:26:02",
-  "fecha": "14 de August, 2026",
+  "actualizado": "2026-08-15T03:39:41",
+  "fecha": "15 de August, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
@@ -16,7 +16,7 @@
     },
     {
       "ciudad": "La Ligua",
-      "max": 17,
+      "max": 18,
       "min": 11,
       "condicion": "Parcialmente nublado"
     }
