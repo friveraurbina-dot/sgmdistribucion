@@ -1,10 +1,10 @@
 {
-  "actualizado": "2026-08-25T09:35:58",
+  "actualizado": "2026-08-25T15:42:20",
   "fecha": "25 de August, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
-      "max": 21,
+      "max": 23,
       "min": 12,
       "condicion": "Parcialmente nublado"
     },
@@ -16,7 +16,7 @@
     },
     {
       "ciudad": "La Ligua",
-      "max": 18,
+      "max": 17,
       "min": 9,
       "condicion": "Parcialmente nublado"
     }
@@ -36,19 +36,19 @@
     },
     {
       "hora": "12:00",
-      "temp": 21
+      "temp": 23
     },
     {
       "hora": "14:00",
-      "temp": 20
+      "temp": 22
     },
     {
       "hora": "16:00",
-      "temp": 19
+      "temp": 21
     },
     {
       "hora": "18:00",
-      "temp": 17
+      "temp": 19
     },
     {
       "hora": "20:00",
