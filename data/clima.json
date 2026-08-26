@@ -1,10 +1,10 @@
 {
-  "actualizado": "2026-08-25T21:28:53",
-  "fecha": "25 de August, 2026",
+  "actualizado": "2026-08-26T03:54:04",
+  "fecha": "26 de August, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
-      "max": 22,
+      "max": 23,
       "min": 12,
       "condicion": "Parcialmente nublado"
     },
@@ -36,19 +36,19 @@
     },
     {
       "hora": "12:00",
-      "temp": 22
+      "temp": 23
     },
     {
       "hora": "14:00",
-      "temp": 21
+      "temp": 22
     },
     {
       "hora": "16:00",
-      "temp": 20
+      "temp": 21
     },
     {
       "hora": "18:00",
-      "temp": 18
+      "temp": 19
     },
     {
       "hora": "20:00",
