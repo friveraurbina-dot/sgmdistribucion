@@ -1,10 +1,10 @@
 {
-  "actualizado": "2026-09-09T18:20:56",
+  "actualizado": "2026-09-09T23:00:15",
   "fecha": "9 de September, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
-      "max": 17,
+      "max": 18,
       "min": 6,
       "condicion": "Parcialmente nublado"
     },
@@ -36,19 +36,19 @@
     },
     {
       "hora": "12:00",
-      "temp": 17
+      "temp": 18
     },
     {
       "hora": "14:00",
-      "temp": 16
+      "temp": 17
     },
     {
       "hora": "16:00",
-      "temp": 15
+      "temp": 16
     },
     {
       "hora": "18:00",
-      "temp": 13
+      "temp": 14
     },
     {
       "hora": "20:00",
