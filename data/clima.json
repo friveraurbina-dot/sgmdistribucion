@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-13T13:41:49",
+  "actualizado": "2026-09-13T17:57:17",
   "fecha": "13 de September, 2026",
   "ciudades": [
     {
@@ -11,7 +11,7 @@
     {
       "ciudad": "Casablanca",
       "max": 21,
-      "min": 8,
+      "min": 7,
       "condicion": "Parcialmente nublado"
     },
     {
