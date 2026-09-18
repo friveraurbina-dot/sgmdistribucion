@@ -1,22 +1,64 @@
 {
-  "actualizado": "2026-09-17T23:25:39",
-  "fecha": "17 de September, 2026",
+  "actualizado": "2026-09-18T08:01:46",
+  "fecha": "18 de September, 2026",
   "ciudades": [
     {
-      "ciudad": "Los Andes",
-      "max": 27,
+      "ciudad": "Valparaíso",
+      "max": 20,
       "min": 12,
       "condicion": "Parcialmente nublado"
     },
     {
-      "ciudad": "Casablanca",
-      "max": 22,
-      "min": 10,
+      "ciudad": "Viña del Mar",
+      "max": 19,
+      "min": 11,
       "condicion": "Parcialmente nublado"
+    },
+    {
+      "ciudad": "Quillota",
+      "max": 20,
+      "min": 9,
+      "condicion": "Parcialmente nublado"
+    },
+    {
+      "ciudad": "Los Andes",
+      "max": 21,
+      "min": 9,
+      "condicion": "Despejado"
+    },
+    {
+      "ciudad": "Casablanca",
+      "max": 19,
+      "min": 10,
+      "condicion": "Nublado"
+    },
+    {
+      "ciudad": "San Antonio",
+      "max": 18,
+      "min": 10,
+      "condicion": "Nublado"
+    },
+    {
+      "ciudad": "Petorca",
+      "max": 23,
+      "min": 12,
+      "condicion": "Despejado"
     },
     {
       "ciudad": "La Ligua",
       "max": 20,
+      "min": 10,
+      "condicion": "Parcialmente nublado"
+    },
+    {
+      "ciudad": "Putaendo",
+      "max": 20,
+      "min": 10,
+      "condicion": "Parcialmente nublado"
+    },
+    {
+      "ciudad": "Papudo",
+      "max": 17,
       "min": 10,
       "condicion": "Parcialmente nublado"
     }
@@ -36,19 +78,19 @@
     },
     {
       "hora": "12:00",
-      "temp": 27
+      "temp": 20
     },
     {
       "hora": "14:00",
-      "temp": 26
+      "temp": 19
     },
     {
       "hora": "16:00",
-      "temp": 25
+      "temp": 18
     },
     {
       "hora": "18:00",
-      "temp": 23
+      "temp": 16
     },
     {
       "hora": "20:00",
