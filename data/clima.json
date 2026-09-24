@@ -1,16 +1,16 @@
 {
-  "actualizado": "2026-09-24T08:13:07",
+  "actualizado": "2026-09-24T14:04:30",
   "fecha": "24 de September, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
       "max": 24,
-      "min": 14,
+      "min": 13,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "Casablanca",
-      "max": 20,
+      "max": 21,
       "min": 11,
       "condicion": "Parcialmente nublado"
     },
@@ -24,15 +24,15 @@
   "horas": [
     {
       "hora": "06:00",
-      "temp": 14
+      "temp": 13
     },
     {
       "hora": "08:00",
-      "temp": 16
+      "temp": 15
     },
     {
       "hora": "10:00",
-      "temp": 18
+      "temp": 17
     },
     {
       "hora": "12:00",
@@ -52,7 +52,7 @@
     },
     {
       "hora": "20:00",
-      "temp": 16
+      "temp": 15
     }
   ]
 }
