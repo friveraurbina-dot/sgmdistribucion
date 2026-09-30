@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-09-29T19:50:08",
-  "fecha": "29 de September, 2026",
+  "actualizado": "2026-09-30T00:05:55",
+  "fecha": "30 de September, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
@@ -16,7 +16,7 @@
     },
     {
       "ciudad": "La Ligua",
-      "max": 18,
+      "max": 19,
       "min": 10,
       "condicion": "Parcialmente nublado"
     }
