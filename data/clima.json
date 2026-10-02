@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-10-01T20:10:43",
-  "fecha": "1 de October, 2026",
+  "actualizado": "2026-10-02T00:34:22",
+  "fecha": "2 de October, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
@@ -10,13 +10,13 @@
     },
     {
       "ciudad": "Casablanca",
-      "max": 26,
+      "max": 25,
       "min": 10,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "La Ligua",
-      "max": 26,
+      "max": 25,
       "min": 12,
       "condicion": "Parcialmente nublado"
     }
