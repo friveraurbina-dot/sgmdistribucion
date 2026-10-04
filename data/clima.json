@@ -1,16 +1,16 @@
 {
-  "actualizado": "2026-10-04T18:33:19",
+  "actualizado": "2026-10-04T23:51:26",
   "fecha": "4 de October, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
-      "max": 17,
+      "max": 15,
       "min": 7,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "Casablanca",
-      "max": 17,
+      "max": 18,
       "min": 8,
       "condicion": "Parcialmente nublado"
     },
@@ -36,19 +36,19 @@
     },
     {
       "hora": "12:00",
-      "temp": 17
-    },
-    {
-      "hora": "14:00",
-      "temp": 16
-    },
-    {
-      "hora": "16:00",
       "temp": 15
     },
     {
-      "hora": "18:00",
+      "hora": "14:00",
+      "temp": 14
+    },
+    {
+      "hora": "16:00",
       "temp": 13
+    },
+    {
+      "hora": "18:00",
+      "temp": 11
     },
     {
       "hora": "20:00",
