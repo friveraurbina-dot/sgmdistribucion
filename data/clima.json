@@ -1,23 +1,23 @@
 {
-  "actualizado": "2026-10-06T09:50:39",
+  "actualizado": "2026-10-06T20:00:51",
   "fecha": "6 de October, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
-      "max": 20,
+      "max": 18,
       "min": 10,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "Casablanca",
-      "max": 14,
-      "min": 10,
+      "max": 15,
+      "min": 9,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "La Ligua",
       "max": 19,
-      "min": 13,
+      "min": 12,
       "condicion": "Parcialmente nublado"
     }
   ],
@@ -36,19 +36,19 @@
     },
     {
       "hora": "12:00",
-      "temp": 20
-    },
-    {
-      "hora": "14:00",
-      "temp": 19
-    },
-    {
-      "hora": "16:00",
       "temp": 18
     },
     {
-      "hora": "18:00",
+      "hora": "14:00",
+      "temp": 17
+    },
+    {
+      "hora": "16:00",
       "temp": 16
+    },
+    {
+      "hora": "18:00",
+      "temp": 14
     },
     {
       "hora": "20:00",
