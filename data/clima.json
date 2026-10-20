@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-20T14:09:11",
+  "actualizado": "2026-10-20T18:59:15",
   "fecha": "20 de October, 2026",
   "ciudades": [
     {
@@ -10,7 +10,7 @@
     },
     {
       "ciudad": "Casablanca",
-      "max": 17,
+      "max": 18,
       "min": 12,
       "condicion": "Parcialmente nublado"
     },
