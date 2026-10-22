@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-22T19:03:56",
+  "actualizado": "2026-10-22T23:54:02",
   "fecha": "22 de October, 2026",
   "ciudades": [
     {
@@ -16,7 +16,7 @@
     },
     {
       "ciudad": "La Ligua",
-      "max": 20,
+      "max": 21,
       "min": 12,
       "condicion": "Parcialmente nublado"
     }
