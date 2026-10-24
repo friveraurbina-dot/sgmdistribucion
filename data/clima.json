@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-24T13:08:56",
+  "actualizado": "2026-10-24T17:54:57",
   "fecha": "24 de October, 2026",
   "ciudades": [
     {
@@ -10,14 +10,14 @@
     },
     {
       "ciudad": "Casablanca",
-      "max": 18,
+      "max": 19,
       "min": 9,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "La Ligua",
-      "max": 20,
-      "min": 11,
+      "max": 21,
+      "min": 10,
       "condicion": "Parcialmente nublado"
     }
   ],
