@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-11-14T19:46:14",
-  "fecha": "14 de November, 2026",
+  "actualizado": "2026-11-15T00:49:05",
+  "fecha": "15 de November, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
@@ -10,13 +10,13 @@
     },
     {
       "ciudad": "Casablanca",
-      "max": 23,
+      "max": 24,
       "min": 14,
       "condicion": "Parcialmente nublado"
     },
     {
       "ciudad": "La Ligua",
-      "max": 23,
+      "max": 24,
       "min": 14,
       "condicion": "Parcialmente nublado"
     }
