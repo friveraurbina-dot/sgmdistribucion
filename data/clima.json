@@ -1,11 +1,11 @@
 {
-  "actualizado": "2026-11-22T20:56:25",
-  "fecha": "22 de November, 2026",
+  "actualizado": "2026-11-23T01:28:13",
+  "fecha": "23 de November, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
       "max": 26,
-      "min": 10,
+      "min": 9,
       "condicion": "Parcialmente nublado"
     },
     {
@@ -17,22 +17,22 @@
     {
       "ciudad": "La Ligua",
       "max": 24,
-      "min": 12,
+      "min": 11,
       "condicion": "Parcialmente nublado"
     }
   ],
   "horas": [
     {
       "hora": "06:00",
-      "temp": 10
+      "temp": 9
     },
     {
       "hora": "08:00",
-      "temp": 12
+      "temp": 11
     },
     {
       "hora": "10:00",
-      "temp": 14
+      "temp": 13
     },
     {
       "hora": "12:00",
@@ -52,7 +52,7 @@
     },
     {
       "hora": "20:00",
-      "temp": 12
+      "temp": 11
     }
   ]
 }
