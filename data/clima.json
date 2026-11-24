@@ -1,6 +1,6 @@
 {
-  "actualizado": "2026-11-23T11:56:00",
-  "fecha": "23 de November, 2026",
+  "actualizado": "2026-11-24T02:01:25",
+  "fecha": "24 de November, 2026",
   "ciudades": [
     {
       "ciudad": "Los Andes",
@@ -17,7 +17,7 @@
     {
       "ciudad": "La Ligua",
       "max": 24,
-      "min": 13,
+      "min": 14,
       "condicion": "Parcialmente nublado"
     }
   ],
